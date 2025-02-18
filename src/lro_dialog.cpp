@@ -45,18 +45,18 @@ namespace lro
         if(speaker == Speaker::Anon){
             return bn::sprite_items::anon_face.create_sprite(-84, 0, static_cast<int>(emotion));
         }
-        if(speaker == Speaker::Lock){
+        // if(speaker == Speaker::Lock){
             return bn::sprite_items::unlock_face.create_sprite(-84, 0, static_cast<int>(emotion));
-        }
+        // }
     }
 
     Dialog::Dialog(bn::vector<DialogLine, 32>& dialog_lines, bn::sprite_text_generator& text_generator)
-    :  _dialog_lines(&dialog_lines), _text_generator(&text_generator), _dialog_bgs({
+    :  _text_generator(&text_generator), _dialog_lines(&dialog_lines), _dialog_bgs{
             bn::sprite_items::dialog_bg.create_sprite(-80, 0, 0),
             bn::sprite_items::dialog_bg.create_sprite(-32, 0, 1),
             bn::sprite_items::dialog_bg.create_sprite(32, 0, 1),
             bn::sprite_items::dialog_bg.create_sprite(80, 0, 2)
-        }), _currentLine(0), _currentChar(0){
+        }, _currentLine(0), _currentChar(0){
 
         for(bn::sprite_ptr dialog_bg : _dialog_bgs){
             dialog_bg.set_bg_priority(0);

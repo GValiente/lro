@@ -77,6 +77,8 @@ namespace lro {
                 bg = bn::regular_bg_items::officer.create_bg(0, 0);
                 startingLevel = 41;
                 break;
+			default :
+				break;
         }
         bg.value().set_blending_enabled(true);
         

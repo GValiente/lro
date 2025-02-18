@@ -51,7 +51,6 @@ namespace lro {
 
         int selected = 0;
         int max_levels = 5;
-        int offset = 0;
 
         bn::vector<bn::sprite_ptr, 32> labels;
 
@@ -229,6 +228,8 @@ namespace lro {
                     case 5 : 
                         fade_out();
                         return Scene::Tutorial;
+					default :
+						break;
                 }
             }
 

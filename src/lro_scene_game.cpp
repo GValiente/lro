@@ -93,10 +93,6 @@ namespace lro
         bool animation_ended = false;
         done.set_visible(false);
         int count_after_finish = 0;
-        int best_moves = 99;
-        if(level > 50){
-            best_moves = _state->get_best_min_moves_list().at(level - 51);
-        }
 
         lro::Levels levels;
 
